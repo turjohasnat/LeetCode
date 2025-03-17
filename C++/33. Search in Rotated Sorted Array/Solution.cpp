@@ -1,3 +1,8 @@
+//C++ Solution:
+
+//Runtime: 0 ms
+//Memory Usage: 15.1 MB
+
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
