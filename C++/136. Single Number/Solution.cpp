@@ -1,22 +1,21 @@
 //C++ Solution:
 
-//Runtime: 512 ms
-//Memory Usage: 20.7 MB
+//Runtime: 13 MS
+//Memory Usage: 23.97 MB
 
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        for(int i = 0; i < nums.size(); i++){
-            bool isDuplicate = false;
-            for(int j = 0; j < nums.size(); j++){
-                if(i != j && nums[i] == nums[j]){
-                    isDuplicate = true;
-                    break;
-                }
-            }
-            if(isDuplicate == false)
-                return nums[i];
+        unordered_map<int, int> num;
+
+        for(auto u : nums)
+            num[u]++;
+
+        for(auto u : num){
+            if(u.second == 1)
+                return u.first;
         }
+
         return -1;
     }
 };
