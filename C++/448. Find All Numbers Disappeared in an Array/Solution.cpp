@@ -1,25 +1,21 @@
 //C++ Solution:
 
-//Runtime: 3 ms
-//Memory Usage: 53 MB
+//Runtime: 77 ms
+//Memory Usage: 66.1 MB
 
 class Solution {
 public:
     vector<int> findDisappearedNumbers(vector<int>& nums) {
-        vector<int> result;
+        set<int> num;
+        for(auto u : nums)
+            num.insert( u );
 
-        for(int i = 0; i < nums.size(); i++){
-            int index = abs(nums[i]) - 1;
-
-            if(nums[index] > 0){
-                nums[index] *= -1;
-            }
+        vector<int> missing_nums;
+        for(int i = 1; i <= nums.size(); i++){
+            if(num.find(i) == num.end())
+                missing_nums.push_back( i );
         }
 
-        for(int i = 0; i < nums.size(); i++){
-            if(nums[i] > 0)
-                result.push_back(i+1);
-        }
-        return result;
+        return missing_nums;
     }
 };
