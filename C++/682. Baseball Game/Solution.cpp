@@ -1,3 +1,8 @@
+//C++ Solution:
+
+//Runtime: 0 ms
+//Memory Usage: 12.2 MB
+    
 class Solution {
 public:
     int calPoints(vector<string>& operations) {
