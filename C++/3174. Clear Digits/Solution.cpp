@@ -1,7 +1,7 @@
 //C++ Solution:
 
-//Runtime: 8 ms
-//Memory Usage: 12.8 MB
+//Runtime: 3 ms
+//Memory Usage: 9.3 MB
 
 class Solution {
 public:
